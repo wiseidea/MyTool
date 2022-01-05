@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HashToolClass</class>
+ <widget class="QWidget" name="HashToolClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>200</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>200</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>500</width>
+    <height>200</height>
+   </size>
+  </property>
+  <property name="font">
+   <font/>
+  </property>
+  <property name="windowTitle">
+   <string>哈希值计算工具</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="7">
+    <widget class="QGroupBox" name="gbxHashType">
+     <property name="minimumSize">
+      <size>
+       <width>481</width>
+       <height>26</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>481</width>
+       <height>26</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>校验类型</string>
+     </property>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>96</x>
+        <y>7</y>
+        <width>281</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QRadioButton" name="rbtMD5">
+         <property name="text">
+          <string>MD5</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="rbSHA1">
+         <property name="text">
+          <string>SHA1</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="rbSHA256">
+         <property name="text">
+          <string>SHA256</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="lblText">
+     <property name="styleSheet">
+      <string notr="true">border-color: rgb(188, 188, 188);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="text">
+      <string>信息</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" rowspan="3" colspan="6">
+    <widget class="QTextEdit" name="edtText"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QPushButton" name="btnFile">
+     <property name="font">
+      <font>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>文件...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QPushButton" name="btnClear">
+     <property name="text">
+      <string>清空</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="lblHash">
+     <property name="text">
+      <string>哈希值：</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="buddy">
+      <cstring>edtHash</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1" colspan="5">
+    <widget class="QLineEdit" name="edtHash">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(245, 245, 245);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="6">
+    <widget class="QPushButton" name="btnCopy">
+     <property name="text">
+      <string>复制</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="lblContrast">
+     <property name="text">
+      <string>参照值：</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="buddy">
+      <cstring>edtContrast</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1" colspan="5">
+    <widget class="QLineEdit" name="edtContrast"/>
+   </item>
+   <item row="5" column="6">
+    <widget class="QPushButton" name="btnPaste">
+     <property name="text">
+      <string>粘贴</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="2">
+    <widget class="QPushButton" name="btnBigen">
+     <property name="text">
+      <string>开始计算</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2">
+    <widget class="QPushButton" name="btnCopyInfo">
+     <property name="text">
+      <string>复制信息</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="3">
+    <widget class="QPushButton" name="btnSaveInfo">
+     <property name="text">
+      <string>保存信息</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="4">
+    <widget class="QPushButton" name="btnCompare">
+     <property name="text">
+      <string>比较哈希值</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="5" colspan="2">
+    <widget class="QPushButton" name="btnCheckUpdate">
+     <property name="text">
+      <string>关于...</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>rbtMD5</tabstop>
+  <tabstop>rbSHA1</tabstop>
+  <tabstop>rbSHA256</tabstop>
+  <tabstop>edtText</tabstop>
+  <tabstop>btnFile</tabstop>
+  <tabstop>btnClear</tabstop>
+  <tabstop>edtHash</tabstop>
+  <tabstop>edtContrast</tabstop>
+  <tabstop>btnCopy</tabstop>
+  <tabstop>btnPaste</tabstop>
+  <tabstop>btnBigen</tabstop>
+  <tabstop>btnCopyInfo</tabstop>
+  <tabstop>btnSaveInfo</tabstop>
+  <tabstop>btnCompare</tabstop>
+  <tabstop>btnCheckUpdate</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
